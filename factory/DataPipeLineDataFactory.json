@@ -1,0 +1,9 @@
+{
+	"name": "DataPipeLineDataFactory",
+	"location": "westus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "51fd0023-957d-4761-acd4-9f11c2479b7f",
+		"tenantId": "a18adcf8-5b0d-4db1-bd67-824762497c4b"
+	}
+}

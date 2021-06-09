@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "Rest to CSV",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -26,10 +26,14 @@
 						}
 					},
 					"sink": {
-						"type": "JsonSink",
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
 						"formatSettings": {
-							"type": "JsonWriteSettings",
-							"filePattern": "setOfObjects"
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
 						}
 					},
 					"enableStaging": false
@@ -42,7 +46,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "Json1",
+						"referenceName": "DelimitedText1",
 						"type": "DatasetReference"
 					}
 				]

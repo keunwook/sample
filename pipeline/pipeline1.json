@@ -42,7 +42,7 @@
 						"mappings": [
 							{
 								"source": {
-									"path": "$['error']['code']"
+									"path": "['holiday_id']"
 								},
 								"sink": {
 									"ordinal": 1
@@ -50,7 +50,7 @@
 							},
 							{
 								"source": {
-									"path": "$['error']['msg']"
+									"path": "['holiday_date']"
 								},
 								"sink": {
 									"ordinal": 2
@@ -58,7 +58,7 @@
 							},
 							{
 								"source": {
-									"path": "$['data'][0]['holiday_id']"
+									"path": "['holiday_name']"
 								},
 								"sink": {
 									"ordinal": 3
@@ -66,29 +66,14 @@
 							},
 							{
 								"source": {
-									"path": "$['data'][0]['holiday_date']"
+									"path": "$['token']"
 								},
 								"sink": {
 									"ordinal": 4
 								}
-							},
-							{
-								"source": {
-									"path": "$['data'][0]['holiday_name']"
-								},
-								"sink": {
-									"ordinal": 5
-								}
-							},
-							{
-								"source": {
-									"path": "$['token']"
-								},
-								"sink": {
-									"ordinal": 6
-								}
 							}
-						]
+						],
+						"collectionReference": "$['data']"
 					}
 				},
 				"inputs": [
